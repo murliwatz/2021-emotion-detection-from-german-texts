@@ -1,0 +1,17 @@
+CLASS: SURPRISE
+NAME: 'Surprised rules based on tone analyses de sample'
+RULES:
+-
+  - LEMMA: Was
+  - LEMMA: sein
+  - LEMMA: denn
+    OPT: true
+  - LEMMA: mit
+  - OR: [{ POS: PRON }, {POS: NOUN}]
+  - LEMMA: { FILE: 'passieren.txt', TYPE: 'SYN'}
+-
+  - LEMMA: Was
+  - LEMMA: sein
+  - LEMMA: denn
+    OPT: true
+  - LEMMA: { FILE: 'passieren.txt', TYPE: 'SYN'}

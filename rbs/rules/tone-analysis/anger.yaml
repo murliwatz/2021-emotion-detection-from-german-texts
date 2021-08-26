@@ -1,0 +1,15 @@
+CLASS: ANGER
+NAME: 'Anger rules based on tone analyses de sample'
+RULES:
+-
+  - POS: PRON
+  - OR: [ { LEMMA: { FILE: 'hated.txt' }}, {LEMMA: {FILE: 'verfickt.txt', TYPE: 'SYN'}}]
+  - OR: [{POS: PRON}, {POS: NOUN}]
+-
+  - LEMMA: {FILE: 'geniessen.txt', TYPE: 'SYN'}
+  - POS: PUNCT
+    OPT: true
+  - POS: PRON
+  - LEMMA: zu
+    OPT: true
+  - LEMMA: {FILE: 'toeten.txt', TYPE: 'SYN'}

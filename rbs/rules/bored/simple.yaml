@@ -1,0 +1,17 @@
+CLASS: BORING
+NAME: 'Some boring rules'
+RULES:
+-
+  - LEMMA: sein
+  - OR: [ { POS: AUX }, { POS: ADV }, { POS: PRON }]
+    OPT: True
+  - OR: [ { POS: AUX }, { POS: ADV }, { POS: PRON }]
+  - LEMMA:
+      FILE: 'bored.txt'
+-
+  - POS: VERB
+  - POS: ADJ
+    OPT: True
+  - LEMMA: { FILE: 'bored.txt' }
+  - OR: [ {TAG: PTKVZ}, {TAG: APPR } ]
+    OPT: True

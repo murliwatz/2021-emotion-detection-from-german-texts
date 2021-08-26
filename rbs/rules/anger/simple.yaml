@@ -1,0 +1,18 @@
+CLASS: CONTEMPT
+NAME: 'Some anger rules'
+RULES:
+-
+  - LEMMA: 'der'
+    OPT: True
+  - LEMMA: 'sein'
+  - LEMMA: 'doch'
+    OPT: True
+  - OPT: True
+  - OPT: True
+  - LEMMA: { FILE: 'Scheiße_2.txt' }
+-
+  - POS: 'ADV'
+    OPT: True
+  - POS: 'DET'
+  - OPT: True
+  - LEMMA: { FILE: 'Scheiße_2.txt' }

@@ -1,0 +1,248 @@
+CLASS: OFFENSE
+NAME: 'Some insult rules'
+RULES:
+-
+  - LEMMA: 'waschlappen'
+# ... , du Arschloch
+-
+  - LEMMA: ','
+  - POS: PRON
+    TAG: PPER
+    #OPT: True
+  - OR: [ LEMMA: {FILE: 'abwertend_populated_nouns.txt', TYPE: 'SYN'}, LEMMA: {FILE: 'swear-words_populated.txt', TYPE: 'SYN'} ]
+-
+  - WORD: ['sie', 'du', 'ihr']
+  - OPT: True
+  - OR: [ LEMMA: {FILE: 'abwertend_populated_nouns.txt', TYPE: 'SYN'}, LEMMA: {FILE: 'swear-words_populated.txt', TYPE: 'SYN'} ]
+-
+  - LEMMA: {FILE: 'verlogen_2_populated.txt', TYPE: 'SYN'}
+  - POS: ADJ
+    OPT: True
+  - OR: [ LEMMA: {FILE: 'abwertend_populated_nouns.txt', TYPE: 'SYN'}, LEMMA: {FILE: 'swear-words_populated.txt', TYPE: 'SYN'} ]
+-
+  - OR: [ {LEMMA: 'PRON' }, {LEMMA: 'NOUN' } ]
+  - LEMMA: sein
+  - LEMMA: nazi
+-
+  - POS: DET
+    TAG: PDAT
+  - LEMMA: nazi
+-
+  - POS: DET
+    TAG: ART
+  - OPT: True
+  - OR: [ LEMMA: {FILE: 'abwertend_populated_nouns.txt', TYPE: 'SYN'}, LEMMA: {FILE: 'swear-words_populated.txt', TYPE: 'SYN'} ]
+  - LEMMA: soll
+-
+  - POS: PRON
+    OPT: True
+  - LEMMA: {FILE: 'verfickt.txt', TYPE: 'SYN'}
+  - OR: [{POS: 'PRON'}, {POS: 'PROPN'}, {POS: 'NOUN'}, {LEMMA: {FILE: 'abwertend_populated_nouns.txt', TYPE: 'SYN'}}]
+# ... , ihr Arschlöcher
+-
+  - LEMMA: ','
+  - POS: DET
+    TAG: PPOSAT
+    #OPT: True
+  - OR: [ LEMMA: {FILE: 'abwertend_populated_nouns.txt', TYPE: 'SYN'}, LEMMA: {FILE: 'swear-words_populated.txt', TYPE: 'SYN'} ]
+# Ich hasse {dich, euch, es, ...}
+-
+  - POS: PRON
+  - LEMMA: {FILE: 'hassen.txt', TYPE: 'FLEXION'}
+  - POS: PRON
+# Was zum {Teufel, Geier, Hugo, ...}
+-
+  - LEMMA: 'was'
+  - LEMMA: 'zum'
+  - OR: [{LEMMA: 'geier'}, {LEMMA: 'hugo'}, {LEMMA: 'teufel'}]
+# Habt ihr die {geringste, leisteste} Ahnung, ...
+-
+  - LEMMA: 'haben'
+  - POS: 'PRON'
+  - OPT: True
+  - OR: [{LEMMA: 'gering'}, {LEMMA: 'leise'}]
+  - LEMMA: 'ahnung'
+# Ich {werde, möchte} dich umbringen
+-
+  - LEMMA: 'ich'
+  - POS: 'AUX'
+  - POS: 'PRON'
+  - LEMMA: 'sich'
+    OPT: True
+  - OPT: True
+  - LEMMA: {FILE: 'umbringen_1.txt', TYPE: 'SYN'}
+# Ich {werde, möchte} das Schwein umbringen
+-
+  - POS: 'AUX'
+  - POS: 'PRON'
+  - POS: 'DET'
+  - OPT: True
+  - LEMMA: {FILE: 'umbringen_1.txt', TYPE: 'SYN'}
+# Fick dich (selbst)! , Fickt euch (selbst)!
+-
+  - OR: [{LEMMA: 'fick'}, {LEMMA: 'fickt'}]
+  - LEMMA: sich
+  - LEMMA: selbst
+    OPT: True
+# Halt deinen Mund, Halte deine Schnauze!
+-
+  - OR: [{LEMMA: 'halt'}, {LEMMA: 'halten'}]
+  - LEMMA: mein
+  - OPT: True
+  - LEMMA: {FILE: 'Mund_1.txt', TYPE: 'SYN'}
+# Wie blöd ...
+-
+  - LEMMA: 'wie'
+  - LEMMA: 'blöd'
+  - POS: 'AUX'
+-
+  - LEMMA: treiben
+  - LEMMA: schon
+    OPT: True
+  - LEMMA: wieder
+    OPT: True
+  - LEMMA: mein
+  - LEMMA: unwesen
+-
+  - LEMMA: faschistoid
+-
+  - LEMMA: sesselfurzer
+-
+  - LEMMA: sitzengeblieben
+-
+  - LEMMA: sitzen
+  - LEMMA: bleiben
+-
+  - OR: [ {LEMMA: 'verziehen'}, {LEMMA: 'verzieh'} ]
+  - LEMMA: sich
+-
+  - LEMMA: wie
+  - LEMMA: sein
+  - LEMMA: ich
+  - LEMMA: denn
+    OPT: True
+  - LEMMA: zur
+  - LEMMA: abwechslung
+-
+  - LEMMA: machen
+  - LEMMA: jetzt
+    OPT: True
+  - LEMMA: ein
+  - LEMMA: auf
+  - LEMMA: fernsehstar
+-
+  - LEMMA: faul
+  - LEMMA: sack
+-
+  - LEMMA: unsympathisch
+-
+  - LEMMA: ignorant
+-
+  - OR: [ LEMMA: {FILE: 'abwertend_populated_nouns.txt', TYPE: 'SYN'}, LEMMA: {FILE: 'swear-words_populated.txt', TYPE: 'SYN'} ]
+  - LEMMA: ignorieren
+-
+  - LEMMA: ignorieren
+  - OPT: True
+  - OR: [ LEMMA: {FILE: 'abwertend_populated_nouns.txt', TYPE: 'SYN'}, LEMMA: {FILE: 'swear-words_populated.txt', TYPE: 'SYN'} ]
+-
+  - WORD: wie
+  - WORD: dämlich
+  - WORD: muss
+  - WORD: man
+  - WORD: sein
+-
+  - LEMMA: gegen
+  - WORD: ['die', 'diese']
+  - LEMMA: dummheit
+  - ANY: True
+  - LEMMA: ['gibts', 'gibt']
+  - WORD: es
+    OPT: True
+-
+  - POS: PRON
+    TAG: PPER
+  - WORD: ist
+  - OPT: True
+  - OPT: True
+  - POS: DET
+    TAG: ART
+  - OPT: True
+  - OR: [ LEMMA: {FILE: 'abwertend_populated_nouns.txt', TYPE: 'SYN'}, LEMMA: {FILE: 'swear-words_populated.txt', TYPE: 'SYN'} ]
+-
+  - WORD: weil
+  - POS: PRON
+    TAG: PPER
+  - OPT: True
+  - OPT: True
+  - POS: DET
+    TAG: ART
+  - OPT: True
+  - OR: [ LEMMA: {FILE: 'abwertend_populated_nouns.txt', TYPE: 'SYN'}, LEMMA: {FILE: 'swear-words_populated.txt', TYPE: 'SYN'} ]
+-
+  - WORD: schande
+  - WORD: für
+  - WORD: die
+  - WORD: nation
+-
+  - LEMMA: sein
+  - ANY: True
+  - LEMMA: gehirnverseucht
+-
+  - LEMMA: halte
+  - ANY: True
+  - LEMMA: für
+  - OR: [ LEMMA: {FILE: 'abwertend_populated_nouns.txt', TYPE: 'SYN'}, LEMMA: {FILE: 'swear-words_populated.txt', TYPE: 'SYN'} ]
+-
+  - LEMMA: in
+  - WORD: den
+  - LEMMA: arsch
+-
+  - LEMMA: kümmern
+  - POS: PRON
+  - LEMMA: um
+  - POS: DET
+  - LEMMA: ['angelegenheit', 'sache', 'geschichte']
+-
+  - LEMMA: können
+  - WORD: nicht
+  - WORD: mehr
+  - WORD: richtig
+  - WORD: im
+  - LEMMA: ['kopf', 'schädel']
+  - WORD: sein
+-
+  - WORD: du
+  - LEMMA: sein
+  - ANY: True
+  - LEMMA: unerwünscht
+-
+  - LEMMA: außer
+  - OPT: True
+  - WORD: fällt
+  - POS: PRON
+  - WORD: nichts
+  - WORD: ein
+-
+  - POS: PRON
+  - LEMMA: sein
+  - OPT: True
+  - WORD: ['unnötig', 'unnütz', 'überflüssig']
+-
+  - LEMMA: merkel
+  - ANY: True
+  - LEMMA: ['vasalle', 'vasallen', 'vasall']
+-
+  - LEMMA: ['vasalle', 'vasallen', 'vasall']
+  - ANY: True
+  - LEMMA: merkel
+-
+  - LEMMA: so
+  - LEMMA: dumm
+-
+  - LEMMA: dumm
+  - POS: ['NOUN', 'PROPN']
+-
+  - LEMMA: islam
+  - ANY: True
+  - LEMMA: rassisitisch
+  - LEMMA: religion

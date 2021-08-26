@@ -1,0 +1,20 @@
+CLASS: CONTEMPT
+NAME: 'Some contempt rules'
+RULES:
+-
+  - POS: PRON
+  - POS: ADP
+    OPT: True
+  - OPT: True
+  - LEMMA: { FILE: 'swear-words-Idiot_1-populated.txt' }
+  - OR: [ {TAG: PTKVZ}, {TAG: APPR } ]
+    OPT: True
+-
+  - POS: DET
+  - LEMMA: { FILE: 'swear-words-Idiot_1-populated.txt' }
+  - OR: [ {TAG: PTKVZ}, {TAG: APPR } ]
+    OPT: True
+-
+  - LEMMA: { FILE: 'swear-words-Idiot_1-populated.txt' }
+  - LEMMA: '!'
+    OPT: True

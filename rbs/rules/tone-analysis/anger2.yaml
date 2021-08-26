@@ -1,0 +1,61 @@
+CLASS: ANGER
+NAME: 'Anger rules based on tone analyses de sample'
+RULES:
+# Du verdammter Arsch
+# Verfickter Hurensohn
+# Verfluchter Dreck!
+-
+  - POS: PRON
+    OPT: True
+  - LEMMA: {FILE: 'verfickt.txt', TYPE: 'SYN'}
+  - OR: [{POS: PRON}, {POS: PROPN}, {POS: NOUN}, {LEMMA: {FILE: 'abwertend_populated.txt', TYPE: 'SYN'}}]
+# ... , du Arschloch
+-
+  - LEMMA: ','
+  - POS: PRON
+    TAG: PPER
+    OPT: True
+  - OR: [ LEMMA: {FILE: 'abwertend_populated.txt', TYPE: 'SYN'}, LEMMA: {FILE: 'swear-words_populated.txt', TYPE: 'SYN'} ]
+# ... , ihr Arschlöcher
+-
+  - LEMMA: ','
+  - POS: DET
+    TAG: PPOSAT
+    OPT: True
+  - OR: [ LEMMA: {FILE: 'abwertend_populated.txt', TYPE: 'SYN'}, LEMMA: {FILE: 'swear-words_populated.txt', TYPE: 'SYN'} ]
+# Ich hasse {dich, euch, es, ...}
+-
+  - POS: PRON
+  - LEMMA: {FILE: 'hassen.txt', TYPE: 'FLEXION'}
+  - POS: PRON
+# Was zum {Teufel, Geier, Hugo, ...}
+-
+  - LEMMA: 'was'
+  - LEMMA: 'zum'
+  - OR: [{LEMMA: 'geier'}, {LEMMA: 'hugo'}, {LEMMA: 'teufel'}]
+# Habt ihr die {geringste, leisteste} Ahnung, ...
+-
+  - LEMMA: 'haben'
+  - POS: 'PRON'
+  - OPT: True
+  - OR: [{LEMMA: 'gering'}, {LEMMA: 'leise'}]
+  - LEMMA: 'ahnung'
+# Ich {werde, möchte} dich umbringen
+-
+  - POS: 'AUX'
+  - POS: 'PRON'
+  - OPT: True
+  - OPT: True
+  - LEMMA: {FILE: 'umbringen_1.txt', TYPE: 'SYN'}
+# Fick dich (selbst)! , Fickt euch (selbst)!
+-
+  - OR: [{LEMMA: 'fick'}, {LEMMA: 'fickt'}]
+  - LEMMA: sich
+  - LEMMA: selbst
+    OPT: True
+# Halt deinen Mund, Halte deine Schnauze!
+-
+  - OR: [{LEMMA: 'halt'}, {LEMMA: 'halten'}]
+  - LEMMA: mein
+  - OPT: True
+  - LEMMA: {FILE: 'Mund_1.txt', TYPE: 'SYN'}

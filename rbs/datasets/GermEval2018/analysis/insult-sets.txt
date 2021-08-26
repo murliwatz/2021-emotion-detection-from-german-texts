@@ -1,0 +1,31 @@
+frozenset({'schulz', 'schulabschluss'}) 19
+frozenset({'schulz', 'sitzen'}) 19
+frozenset({'vasallen', 'merkel'}) 19
+frozenset({'merkel', 'vasall'}) 13
+frozenset({'merkel', 'deutsch'}) 10
+frozenset({'maas', 'heiko'}) 10
+frozenset({'merkel', 'arsch'}) 10
+frozenset({'merkel', 'lügen'}) 10
+frozenset({'schulz', 'martin'}) 8
+frozenset({'schulz', 'sitzen', 'schulabschluss'}) 6
+frozenset({'schulz', 'schulabschluss', 'sitzengeblieben'}) 5
+frozenset({'vasallen', 'merkels'}) 5
+frozenset({'vasall', 'merkels'}) 5
+frozenset({'schulz', 'deutsch'}) 5
+frozenset({'juden', 'antisemitismus'}) 4
+frozenset({'schulz', 'sitzengeblieben'}) 4
+frozenset({'gehirn', 'prothesen'}) 4
+frozenset({'wissen', 'welch'}) 3
+frozenset({'deutsch', 'deutschland'}) 3
+frozenset({'merkel', 'angela'}) 3
+frozenset({'merkel', 'volk'}) 3
+frozenset({'kind', 'schaukel', 'stehen', 'winden'}) 3
+frozenset({'erdogan', 'merkel'}) 3
+frozenset({'versager', 'martin', 'schulz'}) 3
+frozenset({'merkel', 'fragen'}) 3
+frozenset({'irren', 'merkel'}) 3
+frozenset({'dumm', 'naiv'}) 3
+frozenset({'voll', 'deutschland'}) 3
+frozenset({'dumm', 'deutschland'}) 3
+frozenset({'merkel', 'gabriel'}) 3
+frozenset({'regieren', 'deutschland'}) 3
