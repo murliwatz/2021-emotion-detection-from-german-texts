@@ -10,10 +10,10 @@ In this repository there are scripts to work with datasets and dictionaries. The
   - rbs/rules: Defined rules for the rbs
 - misc-scripts: Contains several scripts used for trying out different stuff
   - misc-scripts/extractors: Scripts used to extract special data from dictionaries or datasets (words, pos, emotional words, ...)
-	- misc-scripts/lemmatizer: Scripts used to lemmatize wordlists
-	- misc-scripts/lookup: Scripts used to lookup words from files (especially for translation)
-	- misc-scripts/stemmer: Scripts used to stemm wordlists
-	- misc-scripts/triangulator: Scripts to triangulate language files
+  - misc-scripts/lemmatizer: Scripts used to lemmatize wordlists
+  - misc-scripts/lookup: Scripts used to lookup words from files (especially for translation)
+  - misc-scripts/stemmer: Scripts used to stemm wordlists
+  - misc-scripts/triangulator: Scripts to triangulate language files
 
 # Meaning Crawler
 
