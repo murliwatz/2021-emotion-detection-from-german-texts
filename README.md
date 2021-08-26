@@ -8,6 +8,7 @@ In this repository there are scripts to work with datasets and dictionaries. The
   - rbs/rbs.py: The rule based system script
   - rbs/datasets: Datasets which are applied by the rbs
   - rbs/rules: Defined rules for the rbs
+  - rbs/{emotions, flexions, synonyms}: Contains different wordlists which can be used by rbs rules
 - misc-scripts: Contains several scripts used for trying out different stuff
   - misc-scripts/extractors: Scripts used to extract special data from dictionaries or datasets (words, pos, emotional words, ...)
   - misc-scripts/lemmatizer: Scripts used to lemmatize wordlists
